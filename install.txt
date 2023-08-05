@@ -1,0 +1,50 @@
+@Deprecated Base Tutorial
+https://medium.com/graalvm/using-graalvm-and-native-image-on-windows-10-9954dc071311
+
+DOWNLOAD GRAALVM Java20 Winx64
+https://www.graalvm.org/downloads/
+
+EXTRACT AND SETUP GRAALVM
+setx /M PATH “C:\java\bin;%PATH%”
+setx /M JAVA_HOME “C:\java”
+
+CHECK SETUP GRAALVM
+java -version
+
+INSTALL NATIVE ADDON
+gu install native-image
+
+CHECK NATIBE ADDON
+gu list
+
+INSTALL Visual Studio Installer
+visualstudio.microsoft.com
+
+INSTALL Visual Studio Community 2022 !Preview!
+- Modify > Workloads(İş Yükleri) > On Desktop & Mobile > Desktop with C++ 
+   - Windows 10 SDK 10.0.18362.0
+- Restart
+- Modify > Individual Components(Bağımsız Bileşenler> 
+   - MSVC v142 -VS 2019 C++ x64/x86 build(derleme)
+- Restart
+   
+APPLICATION
+on x64 Native Tool Visual Studio Community 2022 !Preview! 
+   - test.bat
+
+OTHER
+time -f 'Elapsed Time: %e s Max RSS: %M KB' ./helloworld
+native-image [options] -jar jarfile [imagename]
+native-image [options] --module <module>[/<mainclass>] [options]
+
+REM Ring the terminal bell (press Ctrl+G to enter ^G)
+native-image.exe -jar App.jar & echo ^G
+
+REM Open an info dialog box with text
+native-image.exe -jar App.jar & msg "%username%" GraalVM Native Image build completed
+
+ 
+
+
+
+
