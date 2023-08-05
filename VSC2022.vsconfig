@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "components": [
+    "Microsoft.VisualStudio.Component.CoreEditor",
+    "Microsoft.VisualStudio.Workload.CoreEditor",
+    "Microsoft.VisualStudio.Component.Roslyn.Compiler",
+    "Microsoft.VisualStudio.Component.Roslyn.LanguageServices",
+    "Microsoft.VisualStudio.Component.NuGet",
+    "Microsoft.VisualStudio.Component.Windows10SDK.18362",
+    "Microsoft.Net.Component.4.6.TargetingPack",
+    "Microsoft.VisualStudio.Component.VSSDK",
+    "Microsoft.VisualStudio.Component.VC.14.29.16.11.x86.x64"
+  ]
+}
