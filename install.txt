@@ -1,3 +1,5 @@
+NO OTHER THAN WINDOWS 10 ENGLISH
+
 @Deprecated Base Tutorial
 https://medium.com/graalvm/using-graalvm-and-native-image-on-windows-10-9954dc071311
 
@@ -14,8 +16,11 @@ java -version
 INSTALL NATIVE ADDON
 gu install native-image
 
-CHECK NATIBE ADDON
+CHECK NATIVE ADDON
 gu list
+
+INSTAL BUILD TOOLS
+winget install --id=Microsoft.VisualStudio.2019.BuildTools  -e
 
 INSTALL Visual Studio Installer
 visualstudio.microsoft.com
