@@ -19,23 +19,27 @@ gu install native-image
 CHECK NATIVE ADDON
 gu list
 
-INSTAL BUILD TOOLS
+SKIP & NOT WORKING - INSTAL BUILD TOOLS
 winget install --id=Microsoft.VisualStudio.2019.BuildTools  -e
-
-INSTALL Visual Studio Installer
-visualstudio.microsoft.com
+-WITH VSCONFIG FILE > NoNeedNotWorking_VSBuilTools2019.vsconfig
 
 INSTALL Visual Studio Community 2022 !Preview!
-- Modify > Workloads(İş Yükleri) > On Desktop & Mobile > Desktop with C++ 
-   - Windows 10 SDK 10.0.18362.0
-- Restart
-- Modify > Individual Components(Bağımsız Bileşenler> 
-   - MSVC v142 -VS 2019 C++ x64/x86 build(derleme)
+-visualstudio.microsoft.com
+-WITH VSCONFIG FILE > VSC2022Preview.vsconfig
+-WITHOUT VSCONFIG FILE
+	- Modify > Workloads(İş Yükleri) > On Desktop & Mobile > Desktop with C++ 
+	   - Windows 10 SDK 10.0.18362.0
+	- Restart
+	- Modify > Individual Components(Bağımsız Bileşenler> 
+	   - MSVC v142 -VS 2019 C++ x64/x86 build(derleme)
+-FINALLY
 - Restart
    
 APPLICATION
 on x64 Native Tool Visual Studio Community 2022 !Preview! 
    - test.bat
+     - ON WIN11 Home Turkish > Error: Platform specified as windows-amd64 isn't supported.
+	 - ON WIN11 Home English (International) works.
 
 OTHER
 time -f 'Elapsed Time: %e s Max RSS: %M KB' ./helloworld
