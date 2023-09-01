@@ -1,4 +1,5 @@
 NO OTHER THAN WINDOWS 10/11 ENGLISH
+See here if you dont want to reinstall your laptop: https://vmtechs.net/how-to-add-another-language-to-windows-10-or-windows-11-home-single-language/
 
 @Deprecated Base Tutorial
 https://medium.com/graalvm/using-graalvm-and-native-image-on-windows-10-9954dc071311
