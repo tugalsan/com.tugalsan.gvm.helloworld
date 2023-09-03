@@ -1,7 +1,10 @@
 NO OTHER THAN WINDOWS 10/11 ENGLISH
 See here if you dont want to reinstall your laptop: https://vmtechs.net/how-to-add-another-language-to-windows-10-or-windows-11-home-single-language/
 - Annd, I have  not test it yet!
-- be safe and write down your original windows key: wmic path softwareLicensingService get OA3xOriginalProductKey
+- be safe and write down your original windows key: 
+  - cmd:        wmic path SoftwareLicensingService get OA3xOriginalProductKey
+  - powershell: "(Get-WmiObject -query ‘select * from SoftwareLicensingService’).OA3xOriginalProductKey"
+
 
 @Deprecated Base Tutorial
 https://medium.com/graalvm/using-graalvm-and-native-image-on-windows-10-9954dc071311
@@ -36,13 +39,13 @@ INSTALL Visual Studio Community 2022 !Preview!
 	- Modify > Individual Components(Bağımsız Bileşenler> 
 	   - MSVC v142 -VS 2019 C++ x64/x86 build(derleme)
 -FINALLY
-- Restart
+  -Restart
    
 APPLICATION
 on x64 Native Tool Visual Studio Community 2022 !Preview! 
    - test.bat
      - ON WIN11 Home Turkish > Error: Platform specified as windows-amd64 isn't supported.
-	 - ON WIN11 Home English (International) works.
+     - ON WIN11 Home English (International) works.
 
 OTHER
 time -f 'Elapsed Time: %e s Max RSS: %M KB' ./helloworld
