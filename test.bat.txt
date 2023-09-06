@@ -1,4 +1,4 @@
-cd C:\me\codes\com.tugalsan\tut\com.tugalsan.tut.graalvm
+C:\me\codes\com.tugalsan\gvm\com.tugalsan.gvm.helloworld
 del *.class
 del *.exe
 native-image.cmd --version
