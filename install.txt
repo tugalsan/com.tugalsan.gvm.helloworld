@@ -1,18 +1,20 @@
-NO OTHER THAN WINDOWS 10/11 ENGLISH
-See here if you dont want to reinstall your laptop: https://vmtechs.net/how-to-add-another-language-to-windows-10-or-windows-11-home-single-language/
-- Annd, I have  not test it yet!
-- be safe and write down your original windows key: 
-  - cmd:        wmic path SoftwareLicensingService get OA3xOriginalProductKey
-  - powershell: "(Get-WmiObject -query ‘select * from SoftwareLicensingService’).OA3xOriginalProductKey"
-
-
 @Deprecated Base Tutorial
 https://medium.com/graalvm/using-graalvm-and-native-image-on-windows-10-9954dc071311
 
+NO OTHER THAN WINDOWS 10/11 ENGLISH
+- Do not use https://vmtechs.net/how-to-add-another-language-to-windows-10-or-windows-11-home-single-language/
+  it does not work
+- Be safe and write down your original windows key: 
+  - cmd:        wmic path SoftwareLicensingService get OA3xOriginalProductKey
+  - powershell: "(Get-WmiObject -query ‘select * from SoftwareLicensingService’).OA3xOriginalProductKey"
+  - and reinstall all windows from usb as it should be
+
 DOWNLOAD GRAALVM Java20 Winx64
-https://www.graalvm.org/downloads/
+- https://www.graalvm.org/downloads/
+- or https://github.com/graalvm/graalvm-ce-dev-builds/releases
 
 EXTRACT AND SETUP GRAALVM
+setx /M PATH “C:\java\bin;%PATH%”
 setx /M PATH “C:\java\bin;%PATH%”
 setx /M JAVA_HOME “C:\java”
 
@@ -29,20 +31,19 @@ SKIP & NOT WORKING - INSTAL BUILD TOOLS
 winget install --id=Microsoft.VisualStudio.2019.BuildTools  -e
 -WITH VSCONFIG FILE > NoNeedNotWorking_VSBuilTools2019.vsconfig
 
-INSTALL Visual Studio Community 2022 !Preview!
+INSTALL Visual Studio Community 2022 or Preview
 -visualstudio.microsoft.com
--WITH VSCONFIG FILE > VSC2022Preview.vsconfig
+-WITH VSCONFIG FILE > VSC2022_or_Preview.vsconfig
 -WITHOUT VSCONFIG FILE
 	- Modify > Workloads(İş Yükleri) > On Desktop & Mobile > Desktop with C++ 
 	   - Windows 10 SDK 10.0.18362.0
 	- Restart
 	- Modify > Individual Components(Bağımsız Bileşenler> 
 	   - MSVC v142 -VS 2019 C++ x64/x86 build(derleme)
--FINALLY
-  -Restart
+-FINALLY: Restart
    
 APPLICATION
-on x64 Native Tool Visual Studio Community 2022 !Preview! 
+on x64 Native Tool Visual Studio Community 2022 or Preview
    - test.bat
      - ON WIN11 Home Turkish > Error: Platform specified as windows-amd64 isn't supported.
      - ON WIN11 Home English (International) works.
